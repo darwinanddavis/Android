@@ -1,0 +1,16 @@
+# User Interface for Android
+### Matthew Malishev* 
+
+##### *Corresponding author: matthew.malishev@gmail.com  
+
+******
+
+XML notes on building the UI  
+Parent and children views
+
+
+File extensions:   
+.xml         
+
+20180108
+Initial commit
