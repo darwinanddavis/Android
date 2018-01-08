@@ -1,0 +1,225 @@
+<!-- ############################### -->
+<!-- Example of XML code -->
+
+<!-- Android visualiser -->
+http://labs.udacity.com/android-visualizer/#/android/sandbox
+<!-- Android developer site -->
+E.g. for TextView https://developer.android.com/reference/android/widget/TextView.html#attr_android:textStyle
+<!-- android namespace attribute--to include in Parent view  -->
+xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!-- definitions -->
+XML = Ex Markup Language
+IDE = Intergrated Development Environment. E.g. Android Studio
+android:layout_width= <!-- <-- attribute -->
+"wrap_content" <!-- <-- attribute value -->
+100dp = 100 density independent pixels 
+25sp = 25 scale independent pixels (only for fonts) 
+
+<!-- View groups -->
+Container for holding different views 
+Parent viewgroup = holds all containers  
+	- Ray = <RelativeLayout>
+	- Laura = <LinearLayour> 
+
+Child viewgroup = one of the viewgroups, e.g. text or image, sitting inside the parent 
+	- Tommy = <TextView>
+	- Ivy = <ImageView>
+	- <ButtonView>
+
+- Use 'match_parent' to set width to same as parent view (if also set to match_parent) 
+<TextView
+	android:layout_width="match_parent" 
+/>
+
+- Use 'wrap_content' to set height or width to the view margins
+<TextView
+	android:layout_width="wrap_content" 
+/>
+
+<!-- L2,P2 -->
+To evenly space out or set spacing of children viewgroups throughout the parent viewgroup, use android:layout_weight="1" and set layout_width and layout_height to 0dp, wrap_content, or match_parent.
+<TextView
+	android:layout_width="0dp"
+	android:layout_height="0dp"
+	android:layout_weight="1"
+OR
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_weight="1"
+/>
+
+<!-- L2,P2 -->
+Aligning children views in RelativeLayout
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+
+<TextView
+	android:layout_alignParentTop="true"
+	android:layout_alignParentBottom="true"
+	android:layout_alignParentLeft="true"
+	android:layout_alignParentRight="true"
+	android:layout_centerHorizontal="true"
+	android:layout_centerVertical="true"
+	>
+
+</RelativeLayout>
+
+<!-- L2,P2 -->
+Set views relative to other views
+- 1. Set id name in anchor text view 
+<TextView 
+	android:id="@+id/anchor_text"
+	>
+
+- 2. Call to the anchor text view from the target text view
+<TextView
+	android:layout_toLeftOf="@id/anchor_text"
+	android:layout_toRightOf="@id/anchor_text"
+	android:layout_above="@id/anchor_text"
+	android:layout_below="@id/anchor_text"
+	>
+
+<!-- L2,P2 -->
+Padding and Margins
+- Padding applies to child view, margin applies to parent view
+- 8 dp is incremental standard, ie 8, 16, 24, 32
+<TextView
+	android:padding="8dp"
+			OR
+	android:paddingLeft="8dp"
+	android:paddingRight="8dp"
+	android:paddingTop="8dp"
+	android:paddingBottom="8dp"
+
+	android:layout_margin="8dp"
+			OR
+	android:layout_marginLeft="8dp"
+	android:layout_marginRight
+	android:layout_marginTop
+	android:layout_marginBottom
+	>
+
+<LinearLayout
+	android:padding="16dp"
+	android:layout_margin="16dp"
+>
+</LinearLayout>
+
+<!-- L3, Practice set -->
+Installing Android Studio
+- New verions use ConstraintLayout as default.
+- E.g. 
+<android.support.constraint.ConstraintLayout>	
+<TextView
+	app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+	>
+</android.support.constraint.ConstraintLayout>
+
+- To use RelativeLayout instead, change the top line to the following:
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+Then use the following snippet for <TextView>:
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" 
+        />
+(from https://stackoverflow.com/questions/42261712/how-to-switch-from-the-default-constraintlayout-to-relativelayout-in-android-stu)
+
+<!-- Hot keys -->
+Spacebar = Autocomplete word
+^ + Shift + Space = Autocomplete phrase
+Cmd + F7 = Search
+Shift+F6 = Replace all instances throughout doc (Refactor | Rename)
+Shift + <mouse click> = Close tab
+
+
+<!-- ### Style cheat sheet  ### -->
+
+<!-- Font -->
+Ideal font size for different headings
+H1 112sp
+H2 56sp
+H3 45sp
+P 24sp
+
+<!-- Color -->
+Go to Style > Color at  
+
+<!-- ### -->
+
+<!-- ### Images ### -->
+<!-- NB: put ImageView as first child view to place in background  -->
+Need to add apps manually into 'drawable form'
+
+- To center an image in LinearLayout
+<ImageView
+	android:layout_gravity="center"
+/>
+
+- To center an image in RelativeLayout
+<ImageView
+	android:layout_centerInParent="true"
+/>
+
+<ImageView
+	android:src="@drawable/cake"
+	android:layout_centerInParent="true"
+
+/>
+@ = resource in android app
+drawable = resource type
+
+<!-- notes -->
+> Touch targets should be at least 48 dp 
+
+<!-- start Parent element -->
+<LinearLayout  
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent" OR android:layout_width="wrap_content" 
+	android:layout_height="match_parent" OR android:layout_height="wrap_content"
+	android:orientation="vertical" 
+	>
+
+<!-- start Children element -->
+
+
+<ImageView
+	android:src="@drawable/cake"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:scaleType="centerCrop"
+/>
+
+<!-- NB: Use either textSize or textAppearance, not both -->
+<TextView 
+	android:text="This is line 1 \nThis is line 2 \nLine number 3"
+	android:background="#FF4081"
+	android:layout_width="100dp" OR android:layout_width="match_parent"  
+	android:layout_height="50dp"
+	android:layout_weight="1" OR remove completely to have this view fill remainder of screen
+	android:textSize="25sp"
+	android:textAppearance="?android:textAppearanceLarge"
+	android:textColor="#311B92"
+	android:textStyle="bold"
+	android:textAllCaps="true"
+	/> <!-- end Children element (a self closing tag) -->
+
+<TextView 
+	android:text="insert more text here"
+	/> 
+
+<!-- end Parent element -->
+</LinearLayout> 
+
+<!-- ############################### -->
+
