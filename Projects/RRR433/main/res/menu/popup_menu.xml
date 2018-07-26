@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/menu_header"
+        android:title="Header"
+        app:showAsAction="always"
+        app:actionLayout="@layout/custom_layout" />
+    <item
+        android:id="@+id/menu_addtoqueue"
+        android:title="Add to queue" />
+    <item
+        android:id="@+id/menu_playnext"
+        android:title="Play next" />
+    <item
+        android:id="@+id/menu_addtoplaylist"
+        android:title="Add to playlist ..." />
+</menu>
