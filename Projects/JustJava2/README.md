@@ -7,9 +7,8 @@ Files uploaded are from /app/src/main/
 
 activity_main.xml = app/src/main/res/layout  
 images = app/src/main/res/drawable  
-popup_menu.xml = app/src/main/res/menu  
 
 .java   
 
-MainActivity.java = app/src/main/java/com/example/android/   
+app/src/main/java/com/example/android/   
 
