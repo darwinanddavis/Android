@@ -15,4 +15,10 @@ File extensions:
 .png   
 
 20180108
-Initial commit
+Initial commit  
+
+## Maintainer  
+**Matt Malishev**   
+:mag: [Website](https://www.researchgate.net/profile/Matt_Malishev)    
+:bird: [@darwinanddavis](https://twitter.com/darwinanddavis)  
+:email: matthew.malishev [at] gmail.com  
