@@ -1,7 +1,7 @@
 # XML and Android development
 ### Matthew Malishev* 
 
-##### *Corresponding author: matthew.malishev@gmail.com  
+##### *Corresponding author: matthew.malishev [at] gmail.com  
 
 ******
 
