@@ -7,7 +7,7 @@
     android:orientation="horizontal"
     tools:context="com.example.android.lll121V.MainActivity">
 
-    /** Parent 1 */
+    /** Parent 1 **/
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -20,7 +20,7 @@
         android:paddingTop="8dp">
     </LinearLayout>
 
-    /** Parent 2 */
+    /** Parent 2 **/
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
